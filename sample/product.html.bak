@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+     
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            cursor: pointer;
+            background-color: #328f8a;
+        }
+ 
+        .background {
+            background: rgb(52, 86, 139);
+            background-blend-mode: darken;
+            background-size: cover;
+        }
+ 
+        .nav-list {
+            width: 100%;
+            
+            display: flex;
+            align-items: center;
+        }
+ 
+        /* .logo {
+            display: flex;
+            
+            justify-content: center;
+            align-items: center;
+        } */
+ 
+        nav img {
+            width: 180px;
+            float: left;
+        }
+ 
+        .nav-list li {
+            list-style: none;
+            padding: 26px 30px;
+        }
+ 
+        .nav-list  a {
+            text-decoration: none;
+            color: black;
+        }
+ 
+        .nav-list  a:hover {
+            color: grey;
+        }
+        .products{
+            margin: 20px;
+       background-color: rgba(240, 248, 255, 0.167);
+            padding: 40px;
+            border-radius: 10px;
+
+        }
+        .row{
+            display: flex;
+            
+        }
+        .column{
+            width: 100%;
+            margin: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+         
+
+        }
+        .column img{
+            height: 60%;
+            width: 100%;
+        }
+        .container{
+          
+            background-image: linear-gradient(45deg,rgb(102, 152, 232),#328f8a,#328f8a,rgb(102, 152, 232));
+           
+           
+           
+        }
+        .container h2{
+            font-size: 50px;
+        }
+        .column button{
+            font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background-color: #328f8a;
+  background-image: linear-gradient(45deg,rgb(52, 86, 139),#328f8a);
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+ margin-top: 10px;
+ 
+  cursor: pointer;
+        }
+        .column button:hover{
+            background-image: linear-gradient(45deg,#328f8a,rgb(52, 86, 139));
+        }
+        .column p
+        {
+            margin-top: 10px;
+            font-size: 17px;
+        }
+        .column h6{
+            font-size: 16px;
+        }
+        .select{
+width: 60%;
+
+height: 580px;
+padding: 5%;
+background: #222;
+position: fixed;
+top: -1000px;
+left: 20%;
+transition: 0.5s;
+overflow-y: auto;
+margin: auto;
+}
+.select.display{
+top: 10px;
+}
+.select div{
+width: 100%;
+height: 200px;
+display: flex;
+padding: 5px;
+border: 1px solid white;
+position: relative;
+margin: 5px auto;
+}
+.select div img{
+width: 300px;
+height: 100%;
+}
+.select div p{
+padding: 35px;
+color: white;
+}
+.select div h6,
+.select div button{
+position: absolute;
+left: 45%;
+top: 50%;
+color: white;
+}
+.select div button{
+left: 60%;
+top: 55%;
+width: 25%;
+}
+.select div span{
+display: none;
+}
+h1{
+width: 3%;
+   position: relative;
+   top: 5px;
+   
+   cursor: pointer;
+}
+h1:before{
+content: attr(data-count);
+   color: white;
+   position: absolute;
+   right: 16px;
+   font-size: 15px;
+   text-align: center;
+   top: -12px;
+   width: 20px;
+   height: 20px;
+   background: red;
+   border-radius: 50%;
+   opacity: 0;
+}
+h1.zero:before{
+opacity: 1;
+}
+.row div span{
+position: absolute;
+   top: 14px;
+   left: 13px;
+   background: red;
+   width: 300px;
+   height: 186px;
+   display: none;
+}
+.row  div span img{
+width: 100%;
+height: 100%;
+}
+
+
+
+
+
+        
+    </style>
+</head>
+
+<body>
+  
+    <div class="container">
+        <nav class="navbar background">
+            <ul class="nav-list">
+              
+                    <img src= "image/logo.png">
+              
+          
+          <li><a href="Login.html">Login</a></li>
+          
+          <li><a href="Home.html">Home</a></li>
+              
+              
+                
+          
+          <li><a href="profile.html">profile</a></li>
+                <li><a href="contact.html">contact</a></li>
+              
+            </ul>
+            <h1 style="padding-right: 20px;">  <i class=" fa fa-shopping-cart"></i></h1>
+           
+        </nav><br>
+        <center><h2>PRODUCTS</h2></center>
+    <div class="products">
+        
+        <div class="row">
+            <div class="column">
+             <img src="pic/i11.jpg" alt="prod1"><br>
+             <p> Bobbin Case Sewing Machine Parts</p>
+			<br><h6>₹1000</h6>
+			<span></span>
+			
+             <button class="button">add Cart</button>
+            </div>
+            <div class="column">
+                <img src="pic/i12.jpg" alt="prod1"><br>
+                <p>Armatures for Lathe Machine Spare Part</p>
+               <br><h6>₹3,000</h6>
+               <span></span>
+               
+               <button class="button">add Cart</button>
+               </div>
+               <div class="column">
+                <img src="pic/i13.jpg" alt="prod1"><br>
+                <p> Armatures for Steel Milling Cutter Toolset</p>
+               <br><h6>₹4,000</h6>
+               <span></span>
+               
+               <button class="button">add Cart</button>
+               </div>
+              
+           </div>
+           <div class="row">
+            <div class="column">
+                <img src="pic/i14.jpg" alt="prod1"><br>
+                <p> Armatures for Grinding machine</p>
+               <br><h6>₹3,000</h6>
+               <span></span>
+               
+               <button class="button">add Cart</button>
+               </div>
+               <div class="column">
+                <img src="image/10i.jpeg" alt="prod1"><br>
+                <p>Armatures for Metal sheet machine</p>
+               <br><h6>₹8,000</h6>
+               <span></span>
+               
+               <button class="button">add Cart</button>
+               </div>
+               <div class="column">
+                <img src="image/b.png" alt="prod1"><br>
+                <p> Armatures for Drilling machine</p>
+               <br><h6>₹3,000</h6>
+               <span></span>
+               
+               <button class="button">add Cart</button>
+               </div>
+                
+                
+              </div>
+              <div class="row">
+                <div class="column">
+                    <img src="image/2i.jpg" alt="prod1"><br>
+                    <p>Armatures for Shrinkfit Devices machine</p>
+                   <br><h6>₹4,000</h6>
+                   <span></span>
+                   
+                   <button class="button">add Cart</button>
+                   </div>
+                   <div class="column">
+                    <img src="image/i6.jpg" alt="prod1"><br>
+                    <p> Armatures for Grooving and Parting machine</p>
+                   <br><h6>₹4,000</h6>
+                   <span></span>
+                   
+                   <button class="button">add Cart</button>
+                   </div>
+                   <div class="column">
+                    <img src="image/a.png" alt="prod1"><br>
+                    <p> Armatures for Milling machine</p>
+                   <br><h6>₹9,000</h6>
+                   <span></span>
+                   
+                     <button class="button">add Cart</button>
+                   </div>
+                 
+                  
+               </div>
+    </div>
+    </div>
+	<div>
+	<button id='close'>
+    close
+  </button>
+	</div>
+    <div class="select">
+	
+	</div>
+</body>
+<script>
+    var select = document.querySelector('.select');
+    function click() {
+    console.log("hello")
+        if (select.style.display === "block") {
+            select.style.display = "none";
+        }
+    };
+</script>
+<script>
+window.onload = () => {
+  document.getElementById('close').onclick = function() {
+    this.parentNode.remove()
+    return false;
+  };
+};
+</script>
+<script type="text/javascript" src="script.js"></script>
+
+</html>
